@@ -1,0 +1,29 @@
+{
+  "name": "Twitter-Showcase-App-Backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wolyslager/Twitter-Showcase-App-Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wolyslager/Twitter-Showcase-App-Backend/issues"
+  },
+  "homepage": "https://github.com/wolyslager/Twitter-Showcase-App-Backend#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
+  }
+}
