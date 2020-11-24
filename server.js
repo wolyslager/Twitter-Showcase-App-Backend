@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 	//to search for, and return json data regarding the tweets
 	// res.send({"this": "is working"})
 	console.log(req.headers.search_value)
-	url = 'https://api.twitter.com/2/tweets/search/recent?query=from:'+req.headers.search_value
+	url = 'https://api.twitter.com/1.1/search/tweets.json?q='+req.headers.search_value+'&result_type=popular'
 	fetch(url, {
 		headers: {
 			'Content-Type' : 'application/json',
@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 		}
 	}).then(response => response.json())
 	  .then((data) =>{
-	  		res.send(data)
+	  		res.send(data.statuses)
 	  })	
 })
 
