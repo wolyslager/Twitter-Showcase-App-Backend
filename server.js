@@ -4,7 +4,6 @@ const fetch = require('node-fetch');
 const app = express();
 
 app.use(cors());
-
 app.get('/search', (req, res) => {
 	url = 'https://api.twitter.com/1.1/search/tweets.json?q='+req.headers.search_value+'&result_type=popular&tweet_mode=extended '
 	fetch(url, {
@@ -32,7 +31,6 @@ app.get('/random', (req, res) => {
 	  		res.send(data.statuses)
 	  })	
 })
-
 
 app.listen(3000, ()=> {
 	console.log('app is running on port 3000')
