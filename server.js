@@ -18,6 +18,10 @@ app.get('/search', (req, res) => {
 	  })	
 })
 
+app.get('/search-user', (req, res) => {
+	console.log('Works')	
+})
+
 app.get('/random', (req, res) => {
 	url = 'https://api.twitter.com/1.1/search/tweets.json?q='+req.headers.search_value+'&result_type=popular&tweet_mode=extended&count=1'
 	fetch(url, {
@@ -33,5 +37,5 @@ app.get('/random', (req, res) => {
 })
 
 app.listen(process.env.PORT || 3000, ()=> {
-	console.log(`app is running on port ${process.env.PORT}`)
+	console.log('app is running on port 3000')
 })
