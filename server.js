@@ -4,6 +4,8 @@ const fetch = require('node-fetch');
 const app = express();
 
 app.use(cors());
+
+app.get('/', (req, res) => {res.send('it is working!')})
 app.get('/search', (req, res) => {
 	url = 'https://api.twitter.com/1.1/search/tweets.json?q='+req.headers.search_value+'&result_type=popular&tweet_mode=extended '
 	fetch(url, {
@@ -75,8 +77,6 @@ app.get('/random-users-tweets', (req, res) => {
 	  		res.send(data)
 	  })
 })
-
-
 
 app.get('/random', (req, res) => {
 	url = 'https://api.twitter.com/1.1/search/tweets.json?q='+req.headers.search_value+'&result_type=popular&tweet_mode=extended&count=1'
